@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SmartGrades.ia</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- Firebase SDKs via CDN -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>SmartGrades <span>.ia</span></h1>
+    </header>
+
+    <!-- Login -->
+    <div id="login-section">
+      <h2>Login</h2>
+      <input type="email" id="login-email" placeholder="Seu email">
+      <input type="password" id="login-password" placeholder="Sua senha">
+      <button id="register-btn">Cadastrar</button>
+      <button id="login-btn">Entrar</button>
+      <p id="auth-message"></p>
+    </div>
+
+    <!-- App -->
+    <div id="app-section" style="display:none;">
+      <p>Logado como: <span id="user-email"></span> 
+        <button id="logout-btn" style="width:auto;">Sair</button>
+      </p>
+
+      <div class="card">
+        <h3>Adicionar Nota</h3>
+        <select id="subject">
+          <option value="">Selecione a matéria</option>
+          <option value="Português">Português</option>
+          <option value="Matemática">Matemática</option>
+          <option value="História">História</option>
+          <option value="Geografia">Geografia</option>
+          <option value="Ciências">Ciências</option>
+          <option value="Biologia">Biologia</option>
+          <option value="Física">Física</option>
+          <option value="Química">Química</option>
+          <option value="Inglês">Inglês</option>
+          <option value="Filosofia">Filosofia</option>
+          <option value="Sociologia">Sociologia</option>
+          <option value="Educação Física">Educação Física</option>
+          <option value="Artes">Artes</option>
+        </select>
+        <input type="number" id="bimester" placeholder="Bimestre (1-4)" min="1" max="4">
+        <input type="number" id="grade" placeholder="Nota 0-10" step="0.1">
+        <input type="number" id="presence" placeholder="Presença (%)" min="0" max="100">
+        <button id="add-grade-btn">Adicionar Nota</button>
+      </div>
+
+      <div id="grades-list"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

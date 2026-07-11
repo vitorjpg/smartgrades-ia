@@ -1,0 +1,236 @@
+/* Layout geral */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  margin: 0;
+  padding: 20px;
+  color: #f5f7fa;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+  background: #1e293b;
+  padding: 30px;
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+
+header { text-align: center; margin-bottom: 30px; }
+h1 { color: #f5f7fa; font-size: 2.5rem; font-weight: 700; }
+h1 span { color: #3498db; }
+
+/* Login Section */
+#login-section {
+  background: #2c3e50;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.35);
+  display: flex;
+  flex-direction: column;
+  gap: 16px; /* espaçamento uniforme */
+}
+
+#login-section h2 {
+  text-align: center;
+  margin-bottom: 10px;
+  color: #f5f7fa;
+}
+
+#login-section input {
+  background: #0f172a;
+  border: 1px solid #334155;
+  color: #f5f7fa;
+  padding: 12px;
+  width: 100%;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+#login-section input:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 8px rgba(52, 152, 219, 0.7);
+}
+
+/* Botões de login */
+#login-section button {
+  font-weight: bold;
+  cursor: pointer;
+  padding: 12px;
+  width: 100%;
+  border-radius: 8px;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+/* Botão Cadastrar */
+#register-btn {
+  background: linear-gradient(135deg, #2ecc71, #27ae60);
+  color: white;
+  margin-bottom: 12px; /* separa do botão Entrar */
+}
+
+#register-btn:hover {
+  background: linear-gradient(135deg, #27ae60, #1e8449);
+  transform: scale(1.03);
+}
+
+/* Botão Entrar */
+#login-btn {
+  background: linear-gradient(135deg, #3498db, #2980b9);
+  color: white;
+}
+
+#login-btn:hover {
+  background: linear-gradient(135deg, #2980b9, #1f5f8b);
+  transform: scale(1.03);
+}
+
+/* Card geral */
+.card {
+  background: #2c3e50;
+  padding: 25px;
+  border-radius: 12px;
+  margin: 20px 0;
+  color: #fff;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.35);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 18px rgba(0,0,0,0.45);
+}
+
+.card h3 {
+  margin-bottom: 20px;
+  color: #f5f7fa;
+  font-size: 1.5rem;
+  font-weight: 600;
+  border-bottom: 1px solid #334155;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+/* Select estilizado */
+select {
+  padding: 12px;
+  margin: 10px 0;
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid #334155;
+  background: #0f172a url("data:image/svg+xml;utf8,<svg fill='%23f5f7fa' height='24' viewBox='0 0 24 24' width='24'><path d='M7 10l5 5 5-5z'/></svg>") no-repeat right 12px center;
+  background-size: 18px;
+  color: #f5f7fa;
+  font-size: 1rem;
+  cursor: pointer;
+  appearance: none;
+  transition: all 0.3s ease;
+  padding-right: 40px;
+  box-sizing: border-box;
+}
+
+select:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 8px rgba(52, 152, 219, 0.7);
+}
+
+select option {
+  background: #1e293b;
+  color: #f5f7fa;
+  padding: 10px;
+}
+
+/* Inputs do Adicionar Nota */
+#app-section input {
+  background: #0f172a;
+  border: 1px solid #334155;
+  color: #f5f7fa;
+  padding: 12px;
+  margin: 10px 0;
+  width: 100%;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+#app-section input:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 8px rgba(52, 152, 219, 0.7);
+}
+
+/* Botão Adicionar Nota */
+#add-grade-btn {
+  background: linear-gradient(135deg, #3498db, #2980b9);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 14px;
+  border-radius: 8px;
+  border: none;
+  transition: all 0.3s ease;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+}
+
+#add-grade-btn:hover {
+  background: linear-gradient(135deg, #2980b9, #1f5f8b);
+  transform: scale(1.03);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.4);
+}
+
+/* Cards das matérias */
+#grades-list .card {
+  background: #334155;
+}
+
+#grades-list h4 {
+  margin-top: 15px;
+  font-size: 1.2rem;
+  color: #3498db;
+}
+
+#grades-list p {
+  margin: 6px 0;
+  font-size: 0.95rem;
+}
+
+#grades-list button {
+  background: #e74c3c;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#grades-list button:hover {
+  background: #c0392b;
+}
+
+/* Gráficos */
+canvas {
+  width: 100% !important;
+  height: 250px !important;
+  margin-top: 15px;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+  .container { padding: 15px; }
+  .card { flex: 1 1 100%; }
+}
